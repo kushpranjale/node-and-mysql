@@ -3,6 +3,7 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const app = express();
 const router = require('./routes/product_router');
+const ordeRout = require('./routes/product_router');
 
 const PORT = 3000;
 app.use(bodyParser.json());
@@ -32,6 +33,7 @@ app.listen(PORT,() => {
 });
 
 app.use('/products',router);
+app.use('/orders',ordeRout);
 
 
 
